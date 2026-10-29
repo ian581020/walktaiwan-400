@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台灣走讀 14年・近400場全足跡紀錄總覽 (2012-2026)</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Noto Serif TC & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f7f6f2;
+      color: #242220;
+    }
+    .font-serif-tc {
+      font-family: 'Noto Serif TC', serif;
+    }
+    /* 列印與長圖匯出樣式優化 */
+    @media print {
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-shadow-none {
+        box-shadow: none !important;
+        border: 1px solid #e2e8f0 !important;
+      }
+      .page-break-inside-avoid {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+    /* 自訂捲動條 */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #eeeae0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c2baaa;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9f9684;
+    }
+  </style>
+</head>
+<body class="min-h-screen selection:bg-amber-200 selection:text-amber-950 pb-20">
+
+  <!-- 頂部山海主題裝飾條 -->
+  <div class="h-2.5 w-full bg-gradient-to-r from-teal-700 via-amber-600 to-sky-700"></div>
+
+  <!-- 主視覺 Header 區域 -->
+  <header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
+
+    <!-- 封面海報展示區 (手機直式與電腦自動適應) -->
+    <div class="mb-8 flex flex-col items-center">
+      <div class="w-full max-w-4xl bg-white p-2.5 sm:p-4 rounded-3xl shadow-xl border border-stone-200/90 transition-all hover:shadow-2xl">
+        <div class="relative overflow-hidden rounded-2xl bg-stone-100 flex justify-center items-center">
+          <img 
+            id="coverImg" 
+            src="cover.jpg" 
+            alt="台灣走讀14年 400場達成里程碑" 
+            class="max-w-full h-auto max-h-[580px] object-contain rounded-2xl transition-transform duration-300 hover:scale-[1.01]"
+            onerror="this.onerror=null; this.src='https://placehold.co/1200x630/1e293b/fbbf24?text=台灣走讀+14年・400場達成紀念海報+(請上傳+cover.jpg)';"
+          >
+        </div>
+        <div class="p-3 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span class="text-xs sm:text-sm font-semibold text-stone-700">全家三人走讀同行・田野踏查 400 場紀念資料庫</span>
+          </div>
+          <!-- 宏宏的部落格傳送門按鈕 -->
+          <a 
+            href="https://janettu1003.pixnet.net/blog" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-600 to-teal-700 hover:from-sky-700 hover:to-teal-800 text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-transform active:scale-95"
+          >
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+            前往「宏宏的部落格」看詳細遊記
+            <i data-lucide="external-link" class="w-3.5 h-3.5 opacity-80"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 標題與里程碑橫幅 -->
+    <div class="bg-gradient-to-br from-stone-900 via-stone-850 to-teal-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden border border-stone-800">
+      <div class="absolute -right-10 -bottom-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="relative z-10 flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs sm:text-sm font-semibold mb-3 tracking-wide">
+            <i data-lucide="award" class="w-4 h-4 text-amber-400"></i>
+            400 場達成里程碑・14 年足跡完整存檔
+          </div>
+          <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black font-serif-tc tracking-tight text-stone-100">
+            台灣走讀 14 年・近 400 場<br class="hidden sm:inline">全足跡紀錄總覽
+          </h1>
+          <p class="mt-3 text-stone-300 text-xs sm:text-sm max-w-2xl leading-relaxed">
+            「用雙腳閱讀土地，用雙眼見證歷史。從 2012 走到 2026，400 場不是終點，而是我們全家人與這片土地更深的連結。」
+          </p>
+        </div>
+
+        <!-- 匯出與列印按鈕 -->
+        <div class="no-print flex flex-wrap gap-2.5">
+          <button onclick="window.print()" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold shadow-md transition-all active:scale-95 text-xs sm:text-sm">
+            <i data-lucide="printer" class="w-4 h-4"></i>
+            列印 / 存為高清長圖 PDF
+          </button>
+          <button onclick="resetFilters()" class="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 font-medium transition text-xs sm:text-sm border border-stone-700">
+            <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+            重置
+          </button>
+        </div>
+      </div>
+
+      <!-- 統計數據卡片 -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mt-6 pt-6 border-t border-stone-750">
+        <div class="bg-stone-800/80 rounded-2xl p-3 border border-stone-700/60">
+          <span class="text-[11px] text-stone-400 block font-medium">總踏查場次</span>
+          <span class="text-xl sm:text-3xl font-black text-amber-400 font-serif-tc">397 <span class="text-xs text-stone-300 font-normal">場</span></span>
+        </div>
+        <div class="bg-stone-800/80 rounded-2xl p-3 border border-stone-700/60">
+          <span class="text-[11px] text-stone-400 block font-medium">踏查跨度</span>
+          <span class="text-xl sm:text-3xl font-black text-emerald-400 font-serif-tc">14 <span class="text-xs text-stone-300 font-normal">年</span></span>
+        </div>
+        <div class="bg-stone-800/80 rounded-2xl p-3 border border-stone-700/60">
+          <span class="text-[11px] text-stone-400 block font-medium">北部區域</span>
+          <span class="text-xl sm:text-3xl font-black text-sky-400 font-serif-tc">359 <span class="text-xs text-stone-300 font-normal">場</span></span>
+        </div>
+        <div class="bg-stone-800/80 rounded-2xl p-3 border border-stone-700/60">
+          <span class="text-[11px] text-stone-400 block font-medium">南部區域</span>
+          <span class="text-xl sm:text-3xl font-black text-rose-400 font-serif-tc">22 <span class="text-xs text-stone-300 font-normal">場</span></span>
+        </div>
+        <div class="bg-stone-800/80 rounded-2xl p-3 border border-stone-700/60">
+          <span class="text-[11px] text-stone-400 block font-medium">中部區域</span>
+          <span class="text-xl sm:text-3xl font-black text-lime-400 font-serif-tc">14 <span class="text-xs text-stone-300 font-normal">場</span></span>
+        </div>
+        <div class="bg-stone-800/80 rounded-2xl p-3 border border-stone-700/60">
+          <span class="text-[11px] text-stone-400 block font-medium">東部區域</span>
+          <span class="text-xl sm:text-3xl font-black text-purple-400 font-serif-tc">2 <span class="text-xs text-stone-300 font-normal">場</span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主要互動內容 -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+
+    <!-- 篩選器與控制器 (列印時自動隱藏) -->
+    <section class="no-print bg-white rounded-3xl p-5 sm:p-6 shadow-sm border border-stone-200 space-y-4">
+      <div class="flex flex-col lg:flex-row gap-4 items-center justify-between">
+        
+        <!-- 搜尋列 -->
+        <div class="relative w-full lg:w-96">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400"></i>
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="搜尋活動關鍵字、年份或地名..." 
+            class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent text-sm bg-stone-50/60"
+            oninput="handleFilterChange()"
+          >
+        </div>
+
+        <!-- 區域按鈕組 -->
+        <div class="flex flex-wrap items-center gap-1.5 w-full lg:w-auto">
+          <span class="text-xs font-bold text-stone-500 mr-1 flex items-center gap-1">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> 區域：
+          </span>
+          <button onclick="setRegionFilter('ALL')" id="btn-reg-ALL" class="region-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-900 text-white transition">全部 (397)</button>
+          <button onclick="setRegionFilter('北部')" id="btn-reg-北部" class="region-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-100 hover:bg-stone-200 text-stone-700 transition">北部 (359)</button>
+          <button onclick="setRegionFilter('南部')" id="btn-reg-南部" class="region-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-100 hover:bg-stone-200 text-stone-700 transition">南部 (22)</button>
+          <button onclick="setRegionFilter('中部')" id="btn-reg-中部" class="region-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-100 hover:bg-stone-200 text-stone-700 transition">中部 (14)</button>
+          <button onclick="setRegionFilter('東部')" id="btn-reg-東部" class="region-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-100 hover:bg-stone-200 text-stone-700 transition">東部 (2)</button>
+        </div>
+
+        <!-- 年份快選與文章篩選開關 -->
+        <div class="flex flex-wrap items-center gap-3 w-full lg:w-auto justify-end">
+          <div class="flex items-center gap-1.5">
+            <span class="text-xs font-bold text-stone-500">年份：</span>
+            <select id="yearSelect" onchange="handleFilterChange()" class="py-2 px-3 rounded-xl border border-stone-300 text-xs sm:text-sm bg-stone-50 focus:outline-none focus:ring-2 focus:ring-teal-600">
+              <option value="ALL">全部 14 年份</option>
+            </select>
+          </div>
+
+          <!-- 僅顯示部落格專文開關 -->
+          <label class="inline-flex items-center gap-2 cursor-pointer bg-stone-50 px-3 py-2 rounded-xl border border-stone-200 hover:bg-stone-100 transition">
+            <input type="checkbox" id="onlyArticlesCheck" onchange="handleFilterChange()" class="rounded text-teal-600 focus:ring-teal-500 w-4 h-4">
+            <span class="text-xs font-semibold text-stone-700">部落格已收錄</span>
+          </label>
+        </div>
+
+      </div>
+
+      <!-- 快捷主題標籤與檢視模式切換 -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-stone-100 text-xs">
+        <div class="flex flex-wrap items-center gap-1.5 w-full sm:w-auto">
+          <span class="text-stone-400 font-medium">常見探索：</span>
+          <button onclick="quickTagSearch('砲台')" class="px-2.5 py-1 rounded-md bg-stone-100 hover:bg-amber-100 text-stone-600 hover:text-amber-900 transition">基隆砲台群</button>
+          <button onclick="quickTagSearch('保儀大夫')" class="px-2.5 py-1 rounded-md bg-stone-100 hover:bg-amber-100 text-stone-600 hover:text-amber-900 transition">保儀大夫遶境</button>
+          <button onclick="quickTagSearch('深溝')" class="px-2.5 py-1 rounded-md bg-stone-100 hover:bg-amber-100 text-stone-600 hover:text-amber-900 transition">宜蘭深溝農事</button>
+          <button onclick="quickTagSearch('大稻埕')" class="px-2.5 py-1 rounded-md bg-stone-100 hover:bg-amber-100 text-stone-600 hover:text-amber-900 transition">大稻埕老屋</button>
+          <button onclick="quickTagSearch('人權')" class="px-2.5 py-1 rounded-md bg-stone-100 hover:bg-amber-100 text-stone-600 hover:text-amber-900 transition">人權與歷史</button>
+        </div>
+
+        <!-- 視圖切換按鈕 -->
+        <div class="inline-flex rounded-xl p-1 bg-stone-100 border border-stone-200 shrink-0">
+          <button id="viewGridBtn" onclick="setViewMode('grid')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-stone-900 shadow-sm transition">
+            卡片檢視
+          </button>
+          <button id="viewTableBtn" onclick="setViewMode('table')" class="px-3 py-1.5 rounded-lg text-xs font-medium text-stone-600 hover:text-stone-900 transition">
+            表格檢視
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 結果資訊列 -->
+    <div class="flex justify-between items-center px-1">
+      <div class="text-xs sm:text-sm text-stone-600 font-medium">
+        符合場次：<span id="filteredCount" class="font-bold text-amber-700 text-base sm:text-lg">397</span> / 397 場
+      </div>
+      <div class="text-xs text-stone-400 no-print flex items-center gap-1">
+        <i data-lucide="info" class="w-3.5 h-3.5"></i>
+        每筆皆支援「直接閱讀專文」或「Google 精準檢索宏宏部落格」
+      </div>
+    </div>
+
+    <!-- 檢視模式 1：卡片網格容器 -->
+    <div id="gridContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 print-shadow-none"></div>
+
+    <!-- 檢視模式 2：表格容器 -->
+    <div id="tableContainer" class="hidden bg-white rounded-2xl shadow-sm border border-stone-200 overflow-x-auto">
+      <table class="w-full text-left text-xs sm:text-sm">
+        <thead class="bg-stone-50 border-b border-stone-200 text-stone-600 font-semibold uppercase">
+          <tr>
+            <th class="py-3 px-4 w-16">項次</th>
+            <th class="py-3 px-4 w-28">日期</th>
+            <th class="py-3 px-4 w-20">區域</th>
+            <th class="py-3 px-4">活動名稱與路徑</th>
+            <th class="py-3 px-4 text-right w-36">部落格文章</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody" class="divide-y divide-stone-100 font-medium"></tbody>
+      </table>
+    </div>
+
+    <!-- 查無資料提示 -->
+    <div id="noResults" class="hidden text-center py-16 bg-white rounded-3xl border border-stone-200">
+      <i data-lucide="map" class="w-12 h-12 mx-auto text-stone-400 mb-3"></i>
+      <h3 class="text-base font-bold text-stone-700">找不到相符的走讀活動</h3>
+      <p class="text-stone-500 text-xs sm:text-sm mt-1">請嘗試減少搜尋關鍵字，或切換篩選條件為「全部」。</p>
+    </div>
+
+  </main>
+
+  <!-- 頁尾 -->
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 text-center text-xs text-stone-400 no-print space-y-2">
+    <p>台灣走讀 14 年・400場踏查全紀錄資料庫 (2012 - 2026) ｜ 連結「宏宏的部落格」之文史家庭紀行</p>
+    <p>© 2012-2026 Walk Taiwan Archive. All Rights Reserved.</p>
+  </footer>
+
+  <!-- 資料庫與核心程式邏輯 -->
+  <script>
+    // 部落格首頁與 Google 站內搜尋基底 URL
+    const BLOG_BASE_URL = "https://janettu1003.pixnet.net/blog";
+    const BLOG_DOMAIN = "janettu1003.pixnet.net";
+
+    // 明確比對到的部落格文章對照字典 (依據項次 id)
+    const matchedArticles = {
+      394: {
+        url: "https://janettu1003.pixnet.net/blog/posts/909446747479683383",
+        title: "端午連假：三芝一日遊 (遊客中心、杜聰明、李登輝故居)"
+      },
+      395: {
+        url: "https://janettu1003.pixnet.net/blog",
+        title: "三鶯輕軌試乘、秀豐黃昏市場巡禮"
+      },
+      339: {
+        url: "https://janettu1003.pixnet.net/blog/posts/7122134151",
+        title: "渡輪優游生態淡水河・社子島與關渡文史踏查"
+      },
+      352: {
+        url: "https://janettu1003.pixnet.net/blog?page=7",
+        title: "南港北興宮保儀大夫遶境水田祈安紀行"
+      },
+      374: {
+        url: "https://janettu1003.pixnet.net/blog?page=7",
+        title: "南港北興宮保儀大夫遶境文化踏查"
+      },
+      392: {
+        url: "https://janettu1003.pixnet.net/blog?page=7",
+        title: "南港北興宮保儀大夫遶境祈安巡禮"
+      }
+    };
+
+    // 完整 397 筆踏查行程原始資料庫
+    const rawToursData = [
+      { id: 1, date: "2012/10/10", title: "防災科學教育館體驗", region: "北部" },
+      { id: 2, date: "2013/3/3", title: "踩芥菜醃酸菜北市客家文化園區", region: "北部" },
+      { id: 3, date: "2013/3/3", title: "插秧當農夫北市客家文化園區", region: "北部" },
+      { id: 4, date: "2013/4/20", title: "種子計劃IV~尋找福壽螺", region: "北部" },
+      { id: 5, date: "2013/5/12", title: "明池森林遊樂區導覽", region: "北部" },
+      { id: 6, date: "2013/5/25", title: "田園之樂~種菜及騎水牛", region: "北部" },
+      { id: 7, date: "2013/5/25", title: "大安文化節~溫州站(小水滴拓印遊戲)", region: "北部" },
+      { id: 8, date: "2013/5/26", title: "稻草人DIY台北市客家文化主題公園", region: "北部" },
+      { id: 9, date: "2013/6/1", title: "檀香香包(兔子襪)自來水博物館", region: "北部" },
+      { id: 10, date: "2013/6/16", title: "親子DIY/奶油起司杯子蛋糕", region: "北部" },
+      { id: 11, date: "2013/6/22", title: "魔幻時刻創意市集台北當代藝術館MOCA", region: "北部" },
+      { id: 12, date: "2013/6/26", title: "參觀氣象局", region: "北部" },
+      { id: 13, date: "2013/6/29", title: "彩繪石頭郵政博物館", region: "北部" },
+      { id: 14, date: "2013/7/6", title: "西園29服裝創作基地-黏土DIY", region: "北部" },
+      { id: 15, date: "2013/7/20", title: "農夫體驗的美麗句點...割稻樂(種子計畫)", region: "北部" },
+      { id: 16, date: "2013/7/21", title: "2013BMW兒童交通安全體驗營", region: "北部" },
+      { id: 17, date: "2013/7/27", title: "太陽,您好嗎?天文館活動", region: "北部" },
+      { id: 18, date: "2013/10/20", title: "自來水園區環境教育中心-肥皂DIY", region: "北部" },
+      { id: 19, date: "2013/10/27", title: "揪遊臺北~林柳新紀念偶戲博物館", region: "北部" },
+      { id: 20, date: "2013/11/2", title: "天文童話屋:認識彗星(天文館)", region: "北部" },
+      { id: 21, date: "2013/11/17", title: "揪遊臺北~認識後山埤", region: "北部" },
+      { id: 22, date: "2013/11/24", title: "揪遊臺北~偶戲館&陳錫煌年度公演<濟公傳>", region: "北部" },
+      { id: 23, date: "2014/1/26", title: "金玉滿堂，福菜滿罐~存幸福菜(客家文化園區)", region: "北部" },
+      { id: 24, date: "2014/2/8", title: "DIY客家燈籠 臺北客家主題公園", region: "北部" },
+      { id: 25, date: "2014/2/23", title: "國立海科館導覽", region: "北部" },
+      { id: 26, date: "2014/3/1", title: "雲林農業博覽會", region: "南部" },
+      { id: 27, date: "2014/3/15", title: "望遠鏡實驗室活動-中研所天文所", region: "北部" },
+      { id: 28, date: "2014/3/30", title: "宜蘭員山鄉深溝村【有田有米】", region: "北部" },
+      { id: 29, date: "2014/4/18", title: "東勢林場-螢火蟲導覽", region: "中部" },
+      { id: 30, date: "2014/4/26", title: "漫遊信義導覽:101+四四南村", region: "北部" },
+      { id: 31, date: "2014/6/7", title: "Diy鋼彈-新店青少年圖書館", region: "北部" },
+      { id: 32, date: "2014/6/14", title: "日本宿舍DIY北市金山南路二段203巷(台灣油杉社區)", region: "北部" },
+      { id: 33, date: "2014/6/28", title: "小小樂高工程師-美國創新中心", region: "北部" },
+      { id: 34, date: "2014/7/13", title: "小小經理活動麥當勞忠孝二", region: "北部" },
+      { id: 35, date: "2014/8/30", title: "認識斑腿樹蛙台北市動物保護處+南港公園", region: "北部" },
+      { id: 36, date: "2014/9/27", title: "爸爸真偉大親子限定場@自來水博物館", region: "北部" },
+      { id: 37, date: "2014/10/10", title: "頭城農場導覽", region: "北部" },
+      { id: 38, date: "2014/10/12", title: "臺北鐵道文化節-臺北機廠首發導覽", region: "北部" },
+      { id: 39, date: "2014/10/26", title: "大臺北水源故鄉巡禮/讓你蛙目相看-翡翠樹蛙的故鄉", region: "北部" },
+      { id: 40, date: "2014/11/1", title: "桂花釀DIY-台北找茶園", region: "北部" },
+      { id: 41, date: "2014/12/6", title: "參觀總統府聽古蹟", region: "北部" },
+      { id: 42, date: "2014/12/23", title: "保育海洋動物大作戰-認識鯨鯊-總圖", region: "北部" },
+      { id: 43, date: "2015/1/24", title: "羊捏捏-若水藏館", region: "北部" },
+      { id: 44, date: "2015/2/2", title: "北關海潮公園導覽", region: "北部" },
+      { id: 45, date: "2015/2/13", title: "希爾特遇見莎士比亞之莎翁Party - 國家戲劇院", region: "北部" },
+      { id: 46, date: "2015/2/15", title: "印版畫-國立臺灣博物館南門園區", region: "北部" },
+      { id: 47, date: "2015/3/7", title: "拔蘿蔔-臺北市客家文化主題公園", region: "北部" },
+      { id: 48, date: "2015/3/21", title: "插秧-宜蘭深溝村【穀東俱樂部】", region: "北部" },
+      { id: 49, date: "2015/5/9", title: "茶道文化-源吉兆庵本店", region: "北部" },
+      { id: 50, date: "2015/5/16", title: "《2015這一夜，我們在博物館入眠》臺灣博物館土銀展示館", region: "北部" },
+      { id: 51, date: "2015/6/27", title: "認識內溝溪(內溝溪生態展示館)", region: "北部" },
+      { id: 52, date: "2015/7/8", title: "房間裡的蜘蛛網新光三越信義A9 9樓(台北兒童藝術節)", region: "北部" },
+      { id: 53, date: "2015/7/9", title: "從小繪本看見大世界-世界圖畫書欣賞與創作(總圖)", region: "北部" },
+      { id: 54, date: "2015/7/18", title: "收割宜蘭深溝村【穀東俱樂部】", region: "北部" },
+      { id: 55, date: "2015/8/6", title: "偶們的故事/傀儡傳奇南港分局禮堂(台北兒童藝術節)", region: "北部" },
+      { id: 56, date: "2015/8/15", title: "第二屆特力屋俯衝車大賽", region: "北部" },
+      { id: 57, date: "2015/9/13", title: "更寮古道(2015桂花節/南港文化地景導覽)", region: "北部" },
+      { id: 58, date: "2015/9/19", title: "濕地故事館導覽", region: "北部" },
+      { id: 59, date: "2015/9/19", title: "台北古蹟日~臺北賓館古蹟導覽", region: "北部" },
+      { id: 60, date: "2015/10/17", title: "臺大醫院舊館，人文博物館，濟南教會與監察院古蹟導覽", region: "北部" },
+      { id: 61, date: "2015/10/25", title: "關渡國際自然裝置藝術季活動導覽", region: "北部" },
+      { id: 62, date: "2016/2/3", title: "樂慕亞Le Meilleur& Why Glass琉璃藝術展", region: "北部" },
+      { id: 63, date: "2016/3/6", title: "福壽山農場導覽", region: "中部" },
+      { id: 64, date: "2016/3/19", title: "穀東俱樂部插秧體驗(宜蘭深溝村)", region: "北部" },
+      { id: 65, date: "2016/3/27", title: "臺大杜鵑花節-採馬鈴薯活動", region: "北部" },
+      { id: 66, date: "2016/4/5", title: "台中科博館導覽", region: "中部" },
+      { id: 67, date: "2016/4/9", title: "信義社大活動~豹山溪步道導覽", region: "北部" },
+      { id: 68, date: "2016/4/23", title: "Make your pencil alive手創營(台北市圖總館)", region: "北部" },
+      { id: 69, date: "2016/4/23", title: "虎山賞螢步道導覽(奉天宮活動)", region: "北部" },
+      { id: 70, date: "2016/4/24", title: "桑葚緣觀光果園聽講", region: "北部" },
+      { id: 71, date: "2016/5/1", title: "兒童布袋戲研習班BY新興閣掌中劇團(青少年育樂中心)", region: "北部" },
+      { id: 72, date: "2016/5/7", title: "2016漫遊信義文化節-三不五時來旅行(C線瑠公國中、九五峰)", region: "北部" },
+      { id: 73, date: "2016/5/14", title: "105年傳統廟宇傳藝術親子活動(松山奉天宮)", region: "北部" },
+      { id: 74, date: "2016/5/28", title: "蝶谷巴特杯墊DIY活動", region: "北部" },
+      { id: 75, date: "2016/6/5", title: "DIY茶包&南港心 端午情活動(台北找茶園)", region: "北部" },
+      { id: 76, date: "2016/7/16", title: "森林很忙:定向解謎尋寶趣(內雙溪自然中心)", region: "北部" },
+      { id: 77, date: "2016/7/30", title: "認識南港區最老街道~中南街導讀", region: "北部" },
+      { id: 78, date: "2016/8/13", title: "第五屆公共藝術獎導覽活動", region: "北部" },
+      { id: 79, date: "2016/8/26", title: "貓空茶文化生態體驗活動", region: "北部" },
+      { id: 80, date: "2016/8/27", title: "太陽在哪裡?(台電大樓)體驗活動", region: "北部" },
+      { id: 81, date: "2016/9/25", title: "生態米博覽會(臺博館南門園區)聽導覽", region: "北部" },
+      { id: 82, date: "2016/9/25", title: "鋁線動物立體造型DIY(億光大樓)", region: "北部" },
+      { id: 83, date: "2016/10/22", title: "史蹟趴趴GO/百年鐵道故事 戀戀臺北城", region: "北部" },
+      { id: 84, date: "2016/11/5", title: "史蹟趴趴go~臺北府城(魚夫 ) 戀戀臺北城", region: "北部" },
+      { id: 85, date: "2016/11/13", title: "貓空躲貓貓，親子闖關趣", region: "北部" },
+      { id: 86, date: "2016/11/19", title: "登草嶺古道", region: "北部" },
+      { id: 87, date: "2016/12/4", title: "槌染DIY(台北找茶園)", region: "北部" },
+      { id: 88, date: "2016/12/10", title: "全家小小店長體驗(汐止龍安店)", region: "北部" },
+      { id: 89, date: "2016/12/18", title: "十三行博物館聽導覽", region: "北部" },
+      { id: 90, date: "2016/12/25", title: "國立故宮博物館聽導覽", region: "北部" },
+      { id: 91, date: "2017/1/14", title: "無動力小車互動展(再生藝術工坊)", region: "北部" },
+      { id: 92, date: "2017/1/20", title: "台北孔廟剪紙", region: "北部" },
+      { id: 93, date: "2017/1/21", title: "手作茶葉枕(Citylink南港車站)", region: "北部" },
+      { id: 94, date: "2017/1/22", title: "絹印春聯(國立台灣博物館南門園區)", region: "北部" },
+      { id: 95, date: "2017/1/26", title: "台南孔廟聽導覽", region: "南部" },
+      { id: 96, date: "2017/1/28", title: "旗山糖鐵故事館(高雄)", region: "南部" },
+      { id: 97, date: "2017/1/29", title: "信義土地公講故事(信義社大)", region: "北部" },
+      { id: 98, date: "2017/2/5", title: "國立歷史博物館(南海路)", region: "北部" },
+      { id: 99, date: "2017/2/19", title: "走春玩藝大稻埕(臺灣新文化運動紀念館)", region: "北部" },
+      { id: 100, date: "2017/2/25", title: "歲月違章(寶藏巖歷史重述展)", region: "北部" },
+      { id: 101, date: "2017/3/4", title: "芝山岩導覽(金車文教基金會)", region: "北部" },
+      { id: 102, date: "2017/3/11", title: "台大校園導覽活動(臺大杜鵑花節 )", region: "北部" },
+      { id: 103, date: "2017/3/18", title: "採收甘蔗體驗(糖廍文化園區)", region: "北部" },
+      { id: 104, date: "2017/3/25", title: "台原偶戲館(臺灣新文化運動紀念館)", region: "北部" },
+      { id: 105, date: "2017/3/31", title: "臺中霧峰區921地震教育園區聽導覽", region: "中部" },
+      { id: 106, date: "2017/4/7", title: "武陵農場聽導覽", region: "中部" },
+      { id: 107, date: "2017/4/15", title: "溫羅汀千人走讀活動(金車文教基金會)", region: "北部" },
+      { id: 108, date: "2017/4/22", title: "四獸山腳下的傳奇(信義區公所)", region: "北部" },
+      { id: 109, date: "2017/4/29", title: "望春風作者李臨秋幼子李修鑑介紹大稻埕", region: "北部" },
+      { id: 110, date: "2017/5/9", title: "戀戀北淡線懷舊尋幽走讀(中山公民會館)", region: "北部" },
+      { id: 111, date: "2017/5/13", title: "郭雪湖畫展聽導覽", region: "北部" },
+      { id: 112, date: "2017/5/13", title: "潮境保育區週年慶(基隆)", region: "北部" },
+      { id: 113, date: "2017/5/21", title: "通靈少女汐止尋景小旅行(汐止)", region: "北部" },
+      { id: 114, date: "2017/5/27", title: "北投中正親山步道(自然步道協會)", region: "北部" },
+      { id: 115, date: "2017/6/24", title: "臺北港「國防知性之旅暨敦睦活動」", region: "北部" },
+      { id: 116, date: "2017/6/24", title: "大龍峒六藝廣場(大浪泵找狀元活動)", region: "北部" },
+      { id: 117, date: "2017/7/1", title: "中正藝遊味境(東門城外篇)", region: "北部" },
+      { id: 118, date: "2017/7/1", title: "移除斑腿樹蛙(富陽公園)", region: "北部" },
+      { id: 119, date: "2017/7/15", title: "板橋林本源園邸聽導覽(板橋)", region: "北部" },
+      { id: 120, date: "2017/7/19", title: "新月沙洲生態體驗(嘉義布袋)", region: "南部" },
+      { id: 121, date: "2017/7/20", title: "臺灣歷史博物館聽導覽(台南)", region: "南部" },
+      { id: 122, date: "2017/7/20", title: "暢遊十鼓文化村(台南)", region: "南部" },
+      { id: 123, date: "2017/7/21", title: "安平老街聽導覽(台南)", region: "南部" },
+      { id: 124, date: "2017/7/21", title: "四草生態綠色隧道(台江國家公園)", region: "南部" },
+      { id: 125, date: "2017/7/22", title: "基隆河舊河道巡禮(2017士林國際文化節)", region: "北部" },
+      { id: 126, date: "2017/8/3", title: "北門重現，風華再起", region: "北部" },
+      { id: 127, date: "2017/8/26", title: "北萬華西門町時空生活故事走讀", region: "北部" },
+      { id: 128, date: "2017/9/2", title: "大龍峒教育史蹟導覽", region: "北部" },
+      { id: 129, date: "2017/9/10", title: "二弄大稻埕老屋新生(臺北文化護照)", region: "北部" },
+      { id: 130, date: "2017/9/23", title: "一弄 大稻埕回甘(臺北文化護照)", region: "北部" },
+      { id: 131, date: "2017/9/23", title: "林五湖祖厝林家後代導覽", region: "北部" },
+      { id: 132, date: "2017/9/24", title: "華江整宅區(臺北文化護照)", region: "北部" },
+      { id: 133, date: "2017/10/1", title: "桃園神社聽古蹟", region: "北部" },
+      { id: 134, date: "2017/10/8", title: "高雄神社+武德殿+哈瑪星代天宮", region: "南部" },
+      { id: 135, date: "2017/10/22", title: "萬華生活記憶", region: "北部" },
+      { id: 136, date: "2017/10/28", title: "萬華老屋新生", region: "北部" },
+      { id: 137, date: "2017/11/4", title: "蘆洲懷古憶遊時光by金車文教基金會", region: "北部" },
+      { id: 138, date: "2017/11/19", title: "霧峰林家聽導覽", region: "中部" },
+      { id: 139, date: "2017/12/2", title: "小小館員體驗活動-松山分館", region: "北部" },
+      { id: 140, date: "2017/12/9", title: "李梅樹紀念館&三峽祖師廟", region: "北部" },
+      { id: 141, date: "2017/12/16", title: "剪黏示範及實作體驗by陳世仁老師", region: "北部" },
+      { id: 142, date: "2017/12/24", title: "日本年滋味by內湖公民會館", region: "北部" },
+      { id: 143, date: "2017/12/30", title: "走讀頂雙溪+金瓜石神社", region: "北部" },
+      { id: 144, date: "2018/1/13", title: "「臺北孔子廟建築與裝飾藝術」講座", region: "北部" },
+      { id: 145, date: "2018/1/27", title: "獅頭路古徑by新店文史館92故事巷", region: "北部" },
+      { id: 146, date: "2018/2/10", title: "木活字刻字&版畫體驗-臺灣戲曲中心", region: "北部" },
+      { id: 147, date: "2018/1/24", title: "吹糖技藝示範手作by文山公民會館", region: "北部" },
+      { id: 148, date: "2018/3/3", title: "溫羅汀故居憶遊活動by金車文教基金會", region: "北部" },
+      { id: 149, date: "2018/3/18", title: "丹鳳山步道by自然協會步道", region: "北部" },
+      { id: 150, date: "2018/3/25", title: "採甘蔗-糖廍文化園區", region: "北部" },
+      { id: 151, date: "2018/3/31", title: "棲蘭山莊&宜蘭秘境", region: "北部" },
+      { id: 152, date: "2018/4/15", title: "大稻埕千人走讀by金車文教基金會", region: "北部" },
+      { id: 153, date: "2018/4/29", title: "保生文化祭-大龍峒保安宮", region: "北部" },
+      { id: 154, date: "2018/5/5", title: "走訪五分埔", region: "北部" },
+      { id: 155, date: "2018/5/13", title: "採桂竹筍農場體驗活動", region: "北部" },
+      { id: 156, date: "2018/5/19", title: "蒲添生藝術之美&手作體驗by中正區公所", region: "北部" },
+      { id: 157, date: "2018/5/20", title: "新莊遊藝日-新莊老街", region: "北部" },
+      { id: 158, date: "2018/6/10", title: "龍舟體驗活動-大佳河濱公園", region: "北部" },
+      { id: 159, date: "2018/6/24", title: "白石湖社區有機食農教育", region: "北部" },
+      { id: 160, date: "2018/6/29", title: "過盡千帆:王攀元畫展@國立歷史博物館", region: "北部" },
+      { id: 161, date: "2018/6/30", title: "「綠意臺北繽紛大地 步道齊步走」生態導覽活動", region: "北部" },
+      { id: 162, date: "2018/7/14", title: "夏日啤酒節-建國啤酒廠古蹟導覽", region: "北部" },
+      { id: 163, date: "2018/7/21", title: "菁礐溪水圳+喜樂屋有機農場", region: "北部" },
+      { id: 164, date: "2018/8/12", title: "五股溼地夏日賞燕季by荒野保護協會", region: "北部" },
+      { id: 165, date: "2018/8/15", title: "客家文化+鹿港深度之旅", region: "中部" },
+      { id: 166, date: "2018/9/1", title: "平安皂X松山慈祐宮by臺北文化護照", region: "北部" },
+      { id: 167, date: "2018/9/8", title: "打皂健康水環境-內雙溪自然中心", region: "北部" },
+      { id: 168, date: "2018/9/16", title: "古蹟趴趴走-中正紀念堂+大英自然博物館展", region: "北部" },
+      { id: 169, date: "2018/9/22", title: "來呷艋舺味By生活在古蹟", region: "北部" },
+      { id: 170, date: "2018/9/30", title: "圓山密室行腳趣+向日葵花海", region: "北部" },
+      { id: 171, date: "2018/10/6", title: "野柳地質公園導覽", region: "北部" },
+      { id: 172, date: "2018/10/13", title: "文學走路工的台北城南半日遊by生活在古蹟", region: "北部" },
+      { id: 173, date: "2018/10/21", title: "大同古意新文化by台北文獻會", region: "北部" },
+      { id: 174, date: "2018/10/27", title: "小機器人創客玩/天空創意節-文創園區", region: "北部" },
+      { id: 175, date: "2018/11/18", title: "中興文化創意園區", region: "北部" },
+      { id: 176, date: "2018/11/19", title: "武陵農場導覽", region: "中部" },
+      { id: 177, date: "2018/11/25", title: "雁鴨導覽-華江雁鴨生態公園", region: "北部" },
+      { id: 178, date: "2018/12/1", title: "樂活坪林茶鄉趣by新北好茶", region: "北部" },
+      { id: 179, date: "2019/1/5", title: "方舟大解密-國家生技園區", region: "北部" },
+      { id: 180, date: "2019/1/12", title: "大溪茶花節&李騰芳古宅", region: "北部" },
+      { id: 181, date: "2019/2/3", title: "雲林麥寮拱範宮", region: "南部" },
+      { id: 182, date: "2019/2/4", title: "故宮南院聽導覽", region: "南部" },
+      { id: 183, date: "2019/2/28", title: "雪霸休閒農場+楊梅四章堂+新埔宗祠", region: "北部" },
+      { id: 184, date: "2019/3/1", title: "雪霸國家公園+雲霧步道聖稜線+金廣福公館", region: "中部" },
+      { id: 185, date: "2019/3/9", title: "內湖山水走讀趣", region: "北部" },
+      { id: 186, date: "2019/3/24", title: "淡水紅毛城+偕醫館+西學堂+官邸+龍山寺", region: "北部" },
+      { id: 187, date: "2019/4/3", title: "新埔+北埔古蹟群", region: "北部" },
+      { id: 188, date: "2019/4/7", title: "欽差行臺(台灣布政使司衙門)導覽", region: "北部" },
+      { id: 189, date: "2019/4/13", title: "信義遊覽巴士by2019漫遊信義文化節", region: "北部" },
+      { id: 190, date: "2019/4/20", title: "2019台北府城千人走讀", region: "北部" },
+      { id: 191, date: "2019/4/27", title: "閱讀北埔建築之美@藍鵲書房，2019世界閱讀日", region: "北部" },
+      { id: 192, date: "2019/4/28", title: "木柵人文舊街風By金車文教基金會", region: "北部" },
+      { id: 193, date: "2019/5/4", title: "我是小主播@萬興國小", region: "北部" },
+      { id: 194, date: "2019/6/1", title: "龍舟體驗@基隆河大佳河濱公園龍舟碼頭", region: "北部" },
+      { id: 195, date: "2019/6/16", title: "萬華導覽巴士好遊趣活動by萬華區公所", region: "北部" },
+      { id: 196, date: "2019/6/29", title: "劍潭山,文尖山步道by自然步道協會", region: "北部" },
+      { id: 197, date: "2019/7/14", title: "採竹筍體驗by南港農會@麗山農場", region: "北部" },
+      { id: 198, date: "2019/7/17", title: "吳沙故居", region: "北部" },
+      { id: 199, date: "2019/8/3", title: "艋舺百年傳統糕餅舖文化DIY體驗", region: "北部" },
+      { id: 200, date: "2019/8/17", title: "臺北機廠鐵道博物館園區", region: "北部" },
+      { id: 201, date: "2019/8/31", title: "天母古道與水管路獼猴保育宣導by自然步道&台北市動保處", region: "北部" },
+      { id: 202, date: "2019/9/14", title: "淡水古蹟日by旅學堂", region: "北部" },
+      { id: 203, date: "2019/9/28", title: "陳德星堂-台灣陳氏大宗祀", region: "北部" },
+      { id: 204, date: "2019/9/23", title: "站在巨人肩上古典歐洲的當代新建築by市圖天母分館", region: "北部" },
+      { id: 205, date: "2019/10/11", title: "峨眉+北埔之旅", region: "北部" },
+      { id: 206, date: "2019/10/13", title: "中山舞樂夏嬉遊by臺北市立文獻館", region: "北部" },
+      { id: 207, date: "2019/10/19", title: "走透中山南by臺北市立文獻館", region: "北部" },
+      { id: 208, date: "2019/11/10", title: "龍山寺&青草巷by臺北市立文獻館", region: "北部" },
+      { id: 209, date: "2019/11/17", title: "鳳儀書院", region: "南部" },
+      { id: 210, date: "2019/11/24", title: "金瑞治水棲地守護工作假期by台北市水利工程處", region: "北部" },
+      { id: 211, date: "2019/11/30", title: "新竹關西茶香漫步小旅行", region: "北部" },
+      { id: 212, date: "2019/12/8", title: "臺灣新文化運動紀念館定時導覽", region: "北部" },
+      { id: 213, date: "2019/12/15", title: "東南亞英荷殖民建築的演講by台博館南門園區", region: "北部" },
+      { id: 214, date: "2019/12/15", title: "城南記憶-臺北城.南門口", region: "北部" },
+      { id: 215, date: "2019/12/22", title: "王子創意文具國", region: "北部" },
+      { id: 216, date: "2020/1/19", title: "阿嬤的灶腳體驗活動+中山樓", region: "北部" },
+      { id: 217, date: "2020/1/23", title: "雲林斗六老街+行啟紀念館+雲中街", region: "南部" },
+      { id: 218, date: "2020/1/24", title: "莿桐花海", region: "南部" },
+      { id: 219, date: "2020/2/8", title: "新埔花燈迎天穿", region: "北部" },
+      { id: 220, date: "2020/3/15", title: "永春陂生態濕地公園", region: "北部" },
+      { id: 221, date: "2020/5/24", title: "迷你版的淡水大拜拜~大道公的輪值角頭犒軍by 舒喜巷", region: "北部" },
+      { id: 222, date: "2020/5/30", title: "移除外來種工作坊by荒野保護協會-永春陂生態濕地公園", region: "北部" },
+      { id: 223, date: "2020/6/6", title: "萬代繁華、再現艋舺by救國團台北市萬華區", region: "北部" },
+      { id: 224, date: "2020/6/13", title: "李國鼎故居&紙上立體屋by2020中正區歷史復活節", region: "北部" },
+      { id: 225, date: "2020/6/27", title: "臺博三館戶外遊by雙和文史協會", region: "北部" },
+      { id: 226, date: "2020/7/4", title: "碧螺春茶製茶DIY活動by三峽區公所", region: "北部" },
+      { id: 227, date: "2020/7/5", title: "百年稻埕潮生活by臺灣新文化運動紀念館", region: "北部" },
+      { id: 228, date: "2020/7/11", title: "環南圖籍隊by環南新鮮市", region: "北部" },
+      { id: 229, date: "2020/7/18", title: "緬甸小日子by燦爛時光書店", region: "北部" },
+      { id: 230, date: "2020/7/25", title: "和美山灣潭走讀by新店文史館", region: "北部" },
+      { id: 231, date: "2020/7/27", title: "花蓮:太魯閣,慶修院,神社遺址", region: "東部" },
+      { id: 232, date: "2020/7/28", title: "台東:豐濱天空步道,八仙洞,三仙台", region: "東部" },
+      { id: 233, date: "2020/7/29", title: "屏東:佳冬蕭宅,萬金聖母堂,萬巒五水溝劉氏宗祠", region: "南部" },
+      { id: 234, date: "2020/7/30", title: "台南:赤崁樓,億載金城, 永靖:餘三堂,故事牆", region: "南部" },
+      { id: 235, date: "2020/7/31", title: "彰化:元清觀,百年大成幼稚園,銀宮戲院,孔廟,古月民俗館,公會堂", region: "中部" },
+      { id: 236, date: "2020/7/31", title: "台灣十大古宅之首:摘星山莊", region: "中部" },
+      { id: 237, date: "2020/8/1", title: "指南宮竹柏參道生態解說by自然步道協會", region: "北部" },
+      { id: 238, date: "2020/8/8", title: "龜山電廠與土倉家族@記憶倉庫", region: "北部" },
+      { id: 239, date: "2020/8/9", title: "2020五股溼地夏日賞燕季by荒野保護協會", region: "北部" },
+      { id: 240, date: "2020/8/15", title: "深坑四寶文化節BY深坑區公所", region: "北部" },
+      { id: 241, date: "2020/8/15", title: "深坑永安居:台灣十大古宅之一", region: "北部" },
+      { id: 242, date: "2020/8/22", title: "心中山穿街弄巷 夜遊條通by中山區公所", region: "北部" },
+      { id: 243, date: "2020/8/30", title: "台灣寺廟造型之演變&長榮海事博物館", region: "北部" },
+      { id: 244, date: "2020/9/5", title: "林安泰古厝", region: "北部" },
+      { id: 245, date: "2020/9/12", title: "暢秋遊北投:三宅一寺by社團法人台灣藝起公益協會", region: "北部" },
+      { id: 246, date: "2020/9/20", title: "基隆嶼登島+象鼻岩", region: "北部" },
+      { id: 247, date: "2020/9/27", title: "東看西看南北行-古蹟文化小旅行:臺博館X圓山大飯店", region: "北部" },
+      { id: 248, date: "2020/10/9", title: "宜蘭永安石板橋+利澤簡老街+傳藝中心+虎牌米粉", region: "北部" },
+      { id: 249, date: "2020/10/10", title: "109年度樹興社區食農教育體驗", region: "北部" },
+      { id: 250, date: "2020/10/17", title: "大松山千人走讀-松山工農by金車文教基金會", region: "北部" },
+      { id: 251, date: "2020/10/31", title: "食農教育體驗活動-三峽農會", region: "北部" },
+      { id: 252, date: "2020/11/7", title: "台大博物館群:物理文物館，動物博物館及地質標本館", region: "北部" },
+      { id: 253, date: "2020/11/28", title: "認識穆斯林文化by國立臺灣圖書館", region: "北部" },
+      { id: 254, date: "2020/11/28", title: "Open House Taipei打開台北 - 打開司法院", region: "北部" },
+      { id: 255, date: "2020/11/29", title: "新茶上桌小旅行體驗場by金瓜三號", region: "北部" },
+      { id: 256, date: "2020/12/5", title: "艋舺迎青山王暗訪by島內散步&文總", region: "北部" },
+      { id: 257, date: "2020/12/13", title: "竹北七家客家聚落之旅", region: "北部" },
+      { id: 258, date: "2020/12/14", title: "吳濁流故居&褒忠亭&劉氏雙堂屋&張氏家廟", region: "北部" },
+      { id: 259, date: "2020/12/19", title: "天氣瓶手作體驗-Y17", region: "北部" },
+      { id: 260, date: "2020/12/26", title: "不朽的青春-教育大學北師美術館", region: "北部" },
+      { id: 261, date: "2021/1/2", title: "猛禽展示館+凌雲禪寺+開山凌雲寺", region: "北部" },
+      { id: 262, date: "2021/1/9", title: "鯨驗值/鯨骨解密特展活動:刮開鯨骨的秘密-臺博館", region: "北部" },
+      { id: 263, date: "2021/1/23", title: "臺灣文學基地", region: "北部" },
+      { id: 264, date: "2021/1/31", title: "儒艮版畫春聯-臺博館南門園區", region: "北部" },
+      { id: 265, date: "2021/2/6", title: "【市民講座】人文•工藝•逛廟趣！", region: "北部" },
+      { id: 266, date: "2021/2/10", title: "台南山上花園水道博物館", region: "南部" },
+      { id: 267, date: "2021/2/16", title: "南港瓶蓋工廠", region: "北部" },
+      { id: 268, date: "2021/2/20", title: "琉璃工房博物館張毅特展-松山松菸園區", region: "北部" },
+      { id: 269, date: "2021/2/27", title: "台灣近代住宅建築舉隅by凌宗魁-CEO1950總裁藝文空間", region: "北部" },
+      { id: 270, date: "2021/2/28", title: "牛年228連假:大溪老茶廠", region: "北部" },
+      { id: 271, date: "2021/2/28", title: "大溪木藝生態博物館", region: "北部" },
+      { id: 272, date: "2021/3/7", title: "北投焚化廠資源永續走讀by北投樂活節", region: "北部" },
+      { id: 273, date: "2021/3/7", title: "烽火少年楊英風展-師大美術德群畫廊", region: "北部" },
+      { id: 274, date: "2021/3/13", title: "大稻埕裡的茶食風光-2021台北文學季", region: "北部" },
+      { id: 275, date: "2021/4/3", title: "瑞芳區猴硐鐘萼木花季", region: "北部" },
+      { id: 276, date: "2021/4/3", title: "新北市金瓜石黃金博物館", region: "北部" },
+      { id: 277, date: "2021/4/4", title: "龍山寺百年大鼓+龍山寺導覽", region: "北部" },
+      { id: 278, date: "2021/4/10", title: "北投樂活節:職感生活創造所-彩磁彩繪工作坊", region: "北部" },
+      { id: 279, date: "2021/4/10", title: "漫遊信義文化節系列/信義松菸無圍牆博物館走讀", region: "北部" },
+      { id: 280, date: "2021/4/11", title: "大阪商船株式會社台北支店(國家攝影文化中心台北館)", region: "北部" },
+      { id: 281, date: "2021/4/17", title: "2021歷史復活節～中正有寶藏by中正區公所", region: "北部" },
+      { id: 282, date: "2021/9/20", title: "中秋連假:石碇千島湖+老街", region: "北部" },
+      { id: 283, date: "2021/9/25", title: "石門洞+富貴角燈塔+老梅綠石槽", region: "北部" },
+      { id: 284, date: "2021/10/17", title: "基隆小旅行:沙灣歷史文化園區,社寮砲台,正濱漁港,太平青鳥書店", region: "北部" },
+      { id: 285, date: "2021/10/24", title: "「石在好玩、碇要再來」漫步淡蘭古道by石碇觀光發展協會", region: "北部" },
+      { id: 286, date: "2021/10/30", title: "臉譜公仔DIY文化體驗by2021年萬華文化嘉年華傳統活動", region: "北部" },
+      { id: 287, date: "2021/11/7", title: "「水金九行路人」導覽活動", region: "北部" },
+      { id: 288, date: "2021/11/27", title: "中研院歷史文物陳列館by歷史語言研究所", region: "北部" },
+      { id: 289, date: "2021/11/28", title: "岩山里走讀by里長鄭小塔from台北社造季", region: "北部" },
+      { id: 290, date: "2021/12/5", title: "一里一故事‧點亮新三鶯:三鶯社區大學", region: "北部" },
+      { id: 291, date: "2021/12/5", title: "東南亞飲食文化--讀懂南洋辛香料密語by劉明芳老師主講", region: "北部" },
+      { id: 292, date: "2021/12/12", title: "打開新竹-華夏玻璃", region: "北部" },
+      { id: 293, date: "2021/12/12", title: "打開新竹-香山風力發電站", region: "北部" },
+      { id: 294, date: "2021/12/12", title: "打開新竹-國家太空中心", region: "北部" },
+      { id: 295, date: "2021/12/12", title: "新竹孔廟", region: "北部" },
+      { id: 296, date: "2021/12/13", title: "新竹北埔-鄧南光影像館", region: "北部" },
+      { id: 297, date: "2021/12/19", title: "仙跡岩賞蝶導覽by台灣蝴蝶保育學會", region: "北部" },
+      { id: 298, date: "2021/12/19", title: "景美集應廟，台北市定古蹟", region: "北部" },
+      { id: 299, date: "2021/12/25", title: "光 臺灣文化的啟蒙與自覺 - 北師美術館", region: "北部" },
+      { id: 300, date: "2022/1/23", title: "五股守禮堂古蹟導覽", region: "北部" },
+      { id: 301, date: "2022/2/19", title: "三重先嗇宮之旅", region: "北部" },
+      { id: 302, date: "2022/2/26", title: "瑞芳老街by瑞芳老街文化觀光推展協會", region: "北部" },
+      { id: 303, date: "2022/2/28", title: "碇內幸福好蔬遊Diy體驗by碇內社區發展協會", region: "北部" },
+      { id: 304, date: "2022/3/5", title: "十四張大坪林圳導覽", region: "北部" },
+      { id: 305, date: "2022/4/3", title: "猴硐礦工生活記憶漫遊by猴硐礦工文史協會", region: "北部" },
+      { id: 306, date: "2022/4/16", title: "啟蒙初心,追憶洪瑞麟成長之旅by臺北市立美術館", region: "北部" },
+      { id: 307, date: "2022/4/17", title: "松菸文創園區人文歷史/2022漫遊信義文化節by信義社大", region: "北部" },
+      { id: 308, date: "2022/7/23", title: "閻錫山故居，墓園", region: "北部" },
+      { id: 309, date: "2022/7/31", title: "掘光而行:洪瑞麟-北美館", region: "北部" },
+      { id: 310, date: "2022/8/13", title: "國家人權博物館/白色恐怖景美紀念園區", region: "北部" },
+      { id: 311, date: "2022/8/20", title: "胡適紀念館，故居，墓園，公園", region: "北部" },
+      { id: 312, date: "2022/8/28", title: "黃金山城藝術饗宴by瑞芳區公所", region: "北部" },
+      { id: 313, date: "2022/9/9-10", title: "宜蘭之旅-澳底登陸紀念碑，瓏山林蘇澳冷熱泉飯店", region: "北部" },
+      { id: 314, date: "2022/9/18", title: "全國古蹟日~書院頂廟參訪趣(泰山)", region: "北部" },
+      { id: 315, date: "2022/10/15-16", title: "宜蘭礁溪小旅行，廟宇之旅", region: "北部" },
+      { id: 316, date: "2022/10/23", title: "幸町小旅行by文房", region: "北部" },
+      { id: 317, date: "2022/10/29", title: "再訪閻錫山故居，攝影展頒獎活動", region: "北部" },
+      { id: 318, date: "2022/11/5", title: "木柵里山川，廟宇建築藝術巡禮~指南宮", region: "北部" },
+      { id: 319, date: "2022/11/12", title: "白金鹽憶特展-國發會國家檔案局", region: "北部" },
+      { id: 320, date: "2022/12/3", title: "走進．走近．蟾蜍山", region: "北部" },
+      { id: 321, date: "2023/1/1", title: "胡璉將軍故居", region: "北部" },
+      { id: 322, date: "2023/2/11", title: "想你到月球-張雨生特展", region: "北部" },
+      { id: 323, date: "2023/2/26", title: "基隆白米甕炮台&中正公園&仙洞巖", region: "北部" },
+      { id: 324, date: "2023/3/5", title: "採海芋&蓬萊米原種田故事館", region: "北部" },
+      { id: 325, date: "2023/3/11", title: "基隆基隆要塞司令部+役政公園+二砂灣砲台", region: "北部" },
+      { id: 326, date: "2023/3/18", title: "基隆劉銘傳隧道+大武崙砲台+情人湖", region: "北部" },
+      { id: 327, date: "2023/5/27", title: "基隆和平島公園", region: "北部" },
+      { id: 328, date: "2023/6/3", title: "中央研究院-建築圖像與文化傳承by2023走讀臺灣", region: "北部" },
+      { id: 329, date: "2023/6/10", title: "稻埕食光祭-土壟講座及迪化街北段米穀產業講座", region: "北部" },
+      { id: 330, date: "2023/6/17", title: "古新莊民俗大眾爺廟祭遶巡文教體驗by松山社大", region: "北部" },
+      { id: 331, date: "2023/6/21", title: "日月老茶廠+Cona's妮娜巧克力工廠", region: "中部" },
+      { id: 332, date: "2023/6/22", title: "水里蛇窯陶藝文化園區", region: "中部" },
+      { id: 333, date: "2023/7/9", title: "萬華林宅深度導覽", region: "北部" },
+      { id: 334, date: "2023/7/16", title: "大佛寺導覽by台北市佛具商業同業公會", region: "北部" },
+      { id: 335, date: "2023/8/12", title: "走讀淡水:五虎崗-鼻頭岡by淡水文化基金會", region: "北部" },
+      { id: 336, date: "2023/8/26", title: "碧華布街走讀 遇見門神彩繪大師by三重社區大學", region: "北部" },
+      { id: 337, date: "2023/9/9", title: "走讀二二八：文學之旅by二二八基金會", region: "北部" },
+      { id: 338, date: "2023/9/16", title: "古蹟日 : 立法院，行政院，監察院及菸酒專賣局", region: "北部" },
+      { id: 339, date: "2023/10/1", title: "渡輪優游生態淡水河by荒野協會", region: "北部" },
+      { id: 340, date: "2023/10/14", title: "參與式預算成果走讀暨區政議題在地工作坊by中山區公所", region: "北部" },
+      { id: 341, date: "2023/10/21", title: "安坑通谷茶園之旅by新店文史館", region: "北部" },
+      { id: 342, date: "2023/10/29", title: "新起町裡的心起町", region: "北部" },
+      { id: 343, date: "2023/11/4", title: "域見文山堡走讀-暗坑土地公探詢/內五張庄by新店崇光社大", region: "北部" },
+      { id: 344, date: "2023/11/12", title: "探索百年北投市場", region: "北部" },
+      { id: 345, date: "2023/12/3", title: "安康接待室台語導覽by國家人權博物館", region: "北部" },
+      { id: 346, date: "2023/12/31", title: "槓子寮砲台+象鼻岩+酸菜魚", region: "北部" },
+      { id: 347, date: "2024/1/20", title: "基隆燈塔+基隆塔+信二防空洞+乾華十八王公+三芝落羽松", region: "北部" },
+      { id: 348, date: "2024/2/24", title: "元宵節:社子島夜弄土地公", region: "北部" },
+      { id: 349, date: "2024/3/10", title: "參與式預算走讀活動by北投說書人,北投公民會館", region: "北部" },
+      { id: 350, date: "2024/3/30", title: "走訪太白莊:碼頭聚落文化路徑by雞籠卡米諾", region: "北部" },
+      { id: 351, date: "2024/4/6", title: "淡水一日遊，採桑葚，天元宮", region: "北部" },
+      { id: 352, date: "2024/4/13", title: "南港北興宮保儀大夫遶境活動", region: "北部" },
+      { id: 353, date: "2024/4/20", title: "基隆砲台大串連 : 一日雙塔(基隆燈塔&球子山燈塔)", region: "北部" },
+      { id: 354, date: "2024/4/21", title: "苗栗二日遊，拱天宮、秋茂園、龍騰斷橋、勝興車站、鯉魚潭", region: "中部" },
+      { id: 355, date: "2024/4/28", title: "基隆砲台大串連 : 槓子寮砲台by雞籠卡米諾", region: "北部" },
+      { id: 356, date: "2024/5/18", title: "信義之人 : 三張犂四興級炭坑/2024漫遊信義文化生活節by張偉郎", region: "北部" },
+      { id: 357, date: "2024/5/25", title: "臺北建城140週年：北門登城樓by台北文化局", region: "北部" },
+      { id: 358, date: "2024/6/15", title: "海岸教育遊學課程 : 新屋石滬by里海學堂", region: "北部" },
+      { id: 359, date: "2024/6/29", title: "桃園高鐵探索館", region: "北部" },
+      { id: 360, date: "2024/7/28", title: "北投夏日魔法節北投小旅行", region: "北部" },
+      { id: 361, date: "2024/8/22", title: "嘉義獄政博物館導覽", region: "南部" },
+      { id: 362, date: "2024/8/23", title: "阿里山國家森林遊樂區導覽", region: "南部" },
+      { id: 363, date: "2024/8/24", title: "嘉義美術館導覽(建築+展覽)", region: "南部" },
+      { id: 364, date: "2024/10/20", title: "前衛戍醫院北投分院-向陽心苑", region: "北部" },
+      { id: 365, date: "2024/10/26", title: "北投中心新村導覽", region: "北部" },
+      { id: 366, date: "2024/11/3", title: "瑠公圳水泱泱 三犁農田綠昂揚by信義社大", region: "北部" },
+      { id: 367, date: "2024/11/16", title: "打開台北~孫運璿科技人文紀念館", region: "北部" },
+      { id: 368, date: "2024/12/7", title: "漫步北投:找尋北投社的安身之路", region: "北部" },
+      { id: 369, date: "2024/12/14", title: "陽明山美軍眷舍社區導覽", region: "北部" },
+      { id: 370, date: "2025/1/18", title: "旭丘指揮所&頂石閣砲台", region: "北部" },
+      { id: 371, date: "2025/2/8", title: "關渡宮導覽", region: "北部" },
+      { id: 372, date: "2025/2/15", title: "國史館導覽", region: "北部" },
+      { id: 373, date: "2025/2/28", title: "最大海上圖書館-望僕號", region: "北部" },
+      { id: 374, date: "2025/3/29", title: "南港北興宮保儀大夫遶境活動", region: "北部" },
+      { id: 375, date: "2025/4/4", title: "台電北部展示館,金山老街&燭台雙嶼", region: "北部" },
+      { id: 376, date: "2024/4/12", title: "新北美術館試營運", region: "北部" },
+      { id: 377, date: "2025/4/20", title: "基隆港南慢漫走by基隆圖書館信義分館", region: "北部" },
+      { id: 378, date: "2025/5/18", title: "水月道場-法鼓山農禪寺導覽", region: "北部" },
+      { id: 379, date: "2025/5/18", title: "2025國際博物館日-北投文物館導覽", region: "北部" },
+      { id: 380, date: "2025/6/28", title: "法鼓山世界佛教教育園區", region: "北部" },
+      { id: 381, date: "2025/6/28", title: "漫遊金山趣-古道蹦火暖金泉by金山分館114年新北閱讀節走讀", region: "北部" },
+      { id: 382, date: "2025/7/5", title: "大溪老街&聖帝公帶你遊大溪", region: "北部" },
+      { id: 383, date: "2025/7/9", title: "台中中央公園遊客中心", region: "中部" },
+      { id: 384, date: "2025/7/11", title: "台灣油礦陳列館", region: "中部" },
+      { id: 385, date: "2025/8/2", title: "前桃園空軍基地/風起05", region: "北部" },
+      { id: 386, date: "2025/9/13", title: "新店花園新城漫遊", region: "北部" },
+      { id: 387, date: "2025/10/5", title: "松山機場新觀景台巡禮", region: "北部" },
+      { id: 388, date: "2025/11/8", title: "林口國家檔案館導覽", region: "北部" },
+      { id: 389, date: "2026/1/31", title: "劉銘傳隧道導覽", region: "北部" },
+      { id: 390, date: "2026/2/17", title: "走訪西螺、虎尾、嘉義公園", region: "南部" },
+      { id: 391, date: "2026/2/20", title: "走訪新屋、觀音、白沙岬燈塔", region: "北部" },
+      { id: 392, date: "2026/4/25", title: "南港北興宮保儀大夫遶境活動", region: "北部" },
+      { id: 393, date: "2026/5/23", title: "淡江大橋+雲門星巴克", region: "北部" },
+      { id: 394, date: "2026/6/21", title: "端午連假三芝一日遊", region: "北部" },
+      { id: 395, date: "2026/7/5", title: "三鶯輕軌試乘", region: "北部" },
+      { id: 396, date: "2026/9/26", title: "走訪暖暖(暖東峽谷、雙生土地公)", region: "北部" },
+      { id: 397, date: "2026/10/25", title: "五堵走讀", region: "北部" }
+    ];
+
+    let currentRegion = 'ALL';
+    let currentViewMode = 'grid'; // 'grid' | 'table'
+
+    // 取得乾淨搜尋關鍵字 (移除活動多餘符號)
+    function getCleanSearchKeyword(title) {
+      let kw = title.split('by')[0].split('By')[0].split('@')[0];
+      kw = kw.replace(/[\(\)\[\]【】]/g, ' ').trim();
+      const parts = kw.split(/[\s\+\~、,]+/);
+      return parts.length > 0 ? parts[0] : kw;
+    }
+
+    // 建立穩定的 Google 站內搜尋 URL
+    function getGoogleSiteSearchUrl(title) {
+      const cleanKeyword = getCleanSearchKeyword(title);
+      const query = `site:${BLOG_DOMAIN} ${cleanKeyword}`;
+      return `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+    }
+
+    // 初始化年份選單
+    function initYearOptions() {
+      const yearSelect = document.getElementById('yearSelect');
+      const years = new Set();
+      rawToursData.forEach(item => {
+        const y = item.date.split('/')[0];
+        if (y) years.add(y);
+      });
+      const sortedYears = Array.from(years).sort();
+      sortedYears.forEach(year => {
+        const opt = document.createElement('option');
+        opt.value = year;
+        opt.textContent = `${year} 年`;
+        yearSelect.appendChild(opt);
+      });
+    }
+
+    // 區域篩選器切換
+    function setRegionFilter(region) {
+      currentRegion = region;
+      document.querySelectorAll('.region-filter-btn').forEach(btn => {
+        btn.classList.remove('bg-stone-900', 'text-white');
+        btn.classList.add('bg-stone-100', 'text-stone-700');
+      });
+      const activeBtn = document.getElementById(`btn-reg-${region}`);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-stone-900', 'text-white');
+        activeBtn.classList.remove('bg-stone-100', 'text-stone-700');
+      }
+      renderData();
+    }
+
+    // 標籤快捷填入搜尋
+    function quickTagSearch(kw) {
+      document.getElementById('searchInput').value = kw;
+      handleFilterChange();
+    }
+
+    // 重設全部篩選
+    function resetFilters() {
+      document.getElementById('searchInput').value = '';
+      document.getElementById('yearSelect').value = 'ALL';
+      document.getElementById('onlyArticlesCheck').checked = false;
+      setRegionFilter('ALL');
+    }
+
+    function handleFilterChange() {
+      renderData();
+    }
+
+    // 切換視圖模式
+    function setViewMode(mode) {
+      currentViewMode = mode;
+      const gridBtn = document.getElementById('viewGridBtn');
+      const tableBtn = document.getElementById('viewTableBtn');
+      const gridContainer = document.getElementById('gridContainer');
+      const tableContainer = document.getElementById('tableContainer');
+
+      if (mode === 'grid') {
+        gridBtn.className = "px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-stone-900 shadow-sm transition";
+        tableBtn.className = "px-3 py-1.5 rounded-lg text-xs font-medium text-stone-600 hover:text-stone-900 transition";
+        gridContainer.classList.remove('hidden');
+        tableContainer.classList.add('hidden');
+      } else {
+        tableBtn.className = "px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-stone-900 shadow-sm transition";
+        gridBtn.className = "px-3 py-1.5 rounded-lg text-xs font-medium text-stone-600 hover:text-stone-900 transition";
+        gridContainer.classList.add('hidden');
+        tableContainer.classList.remove('hidden');
+      }
+      renderData();
+    }
+
+    // 取得區域顏色樣式
+    function getRegionBadgeClass(region) {
+      switch(region) {
+        case '北部':
+          return 'bg-amber-100/80 text-amber-900 border-amber-300';
+        case '南部':
+          return 'bg-rose-100/80 text-rose-900 border-rose-300';
+        case '中部':
+          return 'bg-emerald-100/80 text-emerald-900 border-emerald-300';
+        case '東部':
+          return 'bg-sky-100/80 text-sky-900 border-sky-300';
+        default:
+          return 'bg-stone-100 text-stone-700 border-stone-200';
+      }
+    }
+
+    // 渲染資料 (支援卡片與表格)
+    function renderData() {
+      const searchVal = document.getElementById('searchInput').value.trim().toLowerCase();
+      const selectedYear = document.getElementById('yearSelect').value;
+      const onlyArticles = document.getElementById('onlyArticlesCheck').checked;
+      const noResults = document.getElementById('noResults');
+
+      const filtered = rawToursData.filter(item => {
+        // 關鍵字搜尋比對
+        const matchSearch = !searchVal || 
+          item.title.toLowerCase().includes(searchVal) || 
+          item.date.includes(searchVal) ||
+          item.id.toString() === searchVal;
+
+        // 年份比對
+        const itemYear = item.date.split('/')[0];
+        const matchYear = (selectedYear === 'ALL') || (itemYear === selectedYear);
+
+        // 區域比對
+        const matchRegion = (currentRegion === 'ALL') || (item.region === currentRegion);
+
+        // 僅部落格專文比對
+        const matchArticle = !onlyArticles || !!matchedArticles[item.id];
+
+        return matchSearch && matchYear && matchRegion && matchArticle;
+      });
+
+      document.getElementById('filteredCount').innerText = filtered.length;
+
+      if (filtered.length === 0) {
+        document.getElementById('gridContainer').innerHTML = '';
+        document.getElementById('tableBody').innerHTML = '';
+        noResults.classList.remove('hidden');
+        return;
+      }
+
+      noResults.classList.add('hidden');
+
+      if (currentViewMode === 'grid') {
+        renderGridView(filtered);
+      } else {
+        renderTableView(filtered);
+      }
+
+      lucide.createIcons();
+    }
+
+    // 繪製卡片檢視 (Grid View)
+    function renderGridView(items) {
+      const container = document.getElementById('gridContainer');
+      let html = '';
+
+      items.forEach(item => {
+        const badgeClass = getRegionBadgeClass(item.region);
+        const article = matchedArticles[item.id];
+        const searchUrl = getGoogleSiteSearchUrl(item.title);
+
+        html += `
+          <div class="page-break-inside-avoid bg-white rounded-2xl p-4 border border-stone-200/90 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+            <div>
+              <!-- 頂部項次與日期 -->
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <div class="flex items-center gap-2">
+                  <span class="inline-flex items-center justify-center font-bold text-xs bg-stone-100 text-stone-700 rounded-md px-2 py-0.5 min-w-[2.2rem]">
+                    #${item.id}
+                  </span>
+                  <span class="text-xs font-semibold text-stone-500 font-mono tracking-tight">${item.date}</span>
+                </div>
+                <span class="text-[11px] font-bold px-2 py-0.5 rounded-full border ${badgeClass}">
+                  ${item.region}
+                </span>
+              </div>
+
+              <!-- 活動標題 -->
+              <h3 class="text-sm sm:text-base font-bold text-stone-850 leading-snug tracking-tight group-hover:text-teal-800 transition-colors">
+                ${item.title}
+              </h3>
+            </div>
+
+            <!-- 底部部落格對應連結列 -->
+            <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
+              ${article ? `
+                <a 
+                  href="${article.url}" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-teal-50 border border-teal-200 text-teal-850 hover:bg-teal-100 text-xs font-bold transition w-full justify-center"
+                  title="${article.title}"
+                >
+                  <i data-lucide="book-open-check" class="w-3.5 h-3.5 text-teal-600"></i>
+                  <span>閱讀部落格專文</span>
+                  <i data-lucide="external-link" class="w-3 h-3 opacity-70"></i>
+                </a>
+              ` : `
+                <a 
+                  href="${searchUrl}" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-stone-50 hover:bg-amber-50 border border-stone-200/80 hover:border-amber-200 text-stone-600 hover:text-amber-900 text-xs font-medium transition w-full justify-center"
+                  title="使用 Google 搜尋宏宏部落格中與此活動相關的記錄"
+                >
+                  <i data-lucide="search" class="w-3.5 h-3.5 text-stone-400"></i>
+                  <span>Google 檢索遊記</span>
+                  <i data-lucide="external-link" class="w-3 h-3 opacity-50"></i>
+                </a>
+              `}
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // 繪製表格檢視 (Table View)
+    function renderTableView(items) {
+      const tbody = document.getElementById('tableBody');
+      let html = '';
+
+      items.forEach(item => {
+        const badgeClass = getRegionBadgeClass(item.region);
+        const article = matchedArticles[item.id];
+        const searchUrl = getGoogleSiteSearchUrl(item.title);
+
+        html += `
+          <tr class="hover:bg-amber-50/40 transition">
+            <td class="py-3 px-4 font-bold text-stone-600">#${item.id}</td>
+            <td class="py-3 px-4 font-mono text-stone-600 whitespace-nowrap">${item.date}</td>
+            <td class="py-3 px-4">
+              <span class="text-[11px] font-bold px-2 py-0.5 rounded-full border ${badgeClass}">
+                ${item.region}
+              </span>
+            </td>
+            <td class="py-3 px-4 font-bold text-stone-850">
+              ${item.title}
+            </td>
+            <td class="py-3 px-4 text-right whitespace-nowrap">
+              ${article ? `
+                <a 
+                  href="${article.url}" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-teal-50 border border-teal-200 text-teal-800 hover:bg-teal-100 text-xs font-bold transition"
+                >
+                  <i data-lucide="book-open" class="w-3 h-3"></i>
+                  專文收錄
+                </a>
+              ` : `
+                <a 
+                  href="${searchUrl}" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-stone-100 hover:bg-stone-200 text-stone-600 text-xs transition"
+                  title="使用 Google 搜尋宏宏部落格紀錄"
+                >
+                  <i data-lucide="search" class="w-3 h-3"></i>
+                  Google 檢索
+                </a>
+              `}
+            </td>
+          </tr>
+        `;
+      });
+
+      tbody.innerHTML = html;
+    }
+
+    // 網頁加載完成啟動
+    window.onload = function() {
+      initYearOptions();
+      renderData();
+      lucide.createIcons();
+    };
+  </script>
+</body>
+</html>
